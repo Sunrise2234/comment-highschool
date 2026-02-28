@@ -192,6 +192,21 @@
             background-color: #f1f1f1;
             width: 30%;
         }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .faq-item h4 {
+            margin: 0 0 10px;
+            color: var(--primary-color);
+        }
+        .faq-item p {
+            margin: 0;
+        }
         footer {
             background-color: #333;
             color: #fff;
@@ -217,7 +232,10 @@
                     <li><a href="#about">校長挨拶</a></li>
                     <li><a href="#courses">課程紹介</a></li>
                     <li><a href="#teachers">講師・OB</a></li>
-                    <li><a href="#notices">在校生・保護者様へ</a></li>
+					<li><a href="#notices">お知らせ</a></li>
+					<li><a href="#partners">提携機関</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#access">アクセス</a></li>
                     <li><a href="#admission">募集要項</a></li>
                 </ul>
             </nav>
@@ -237,7 +255,7 @@
         <div class="message-box">
             <p>「配信は、配信者一人で作るものではありません。」</p>
             <p>リスナーのコメントがあってこそ、一つのエンターテインメントが完成します。当校では、ただ文字を打つだけでなく、場を沸かせ、配信者のモチベーションを引き上げ、時には愛のあるイジりで枠全体を盛り上げる「真のコメント力」を育成します。</p>
-            <p>ROMる（見るだけ）時代は終わりました。さあ、あなたの指先で、推しの配信を伝説に変えましょう。</p>
+            <p>ROM専（見るだけ）の時代は終わりました。さあ、あなたの指先で、推しの配信を伝説に変えましょう。</p>
             <p style="text-align: right; font-weight: bold; margin-top: 20px;">
                 コメント専門学校 校長<br>草生 太郎（くさむえ たろう）
             </p>
@@ -311,7 +329,7 @@
         <h3>伝説のリスナーたち（卒業生の声）</h3>
         <div class="grid-2">
             <div class="card alumni-card">
-                <p><strong>「私の『初見です』から全てが始まりました」</strong></p>
+                <p><strong>「コメントに対する意識を変えてくれた場所です」</strong></p>
                 <p style="font-size: 0.9rem;">入学前はROM専でしたが、ここでタイミングと語彙力を学んだ結果、今では推しの配信で「いつもの人」として認知されています。人生を変えてくれたこの学校に、深い感謝を。</p>
                 <p style="text-align: right; font-size: 0.8rem; color: #666;">（ネタコメ養成課程 1期生 / P.N. ソルト）</p>
             </div>
@@ -346,12 +364,11 @@
                         </li>
                     </ul>
                 </div>
-
-                <div>
+                 <div>
                     <h2>同窓会のお知らせ</h2>
                     <div class="card message-box" style="padding: 25px;">
                         <h3 style="margin-top: 0; color: var(--primary-color);">第1回 コメ専同窓会</h3>
-                        <p>卒業生、在校生、講師陣が集う年に一度のオンライン大同窓会を開催します！推しの布教、最近の配信トレンド、神コメントの共有など、朝まで語り明かしましょう。</p>
+                        <p>卒業生、在校生、講師陣が一同に集う、すっごい（語彙力）大同窓会を開催します！推しの布教、最近の配信トレンド、神コメントの共有など、朝まで語り明かしましょう。</p>
                         <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem;">
                             <tr>
                                 <th style="text-align: left; padding: 5px 0; border-bottom: 1px solid #ddd; width: 30%;">日時</th>
@@ -373,37 +390,114 @@
         </div>
     </section>
 
-    <section id="admission" class="container">
-        <h2>2027年度 出願日程・募集要項</h2>
-        <table class="admission-table">
-            <tbody>
-                <tr>
-                    <th>募集定員</th>
-                    <td>各課程 30名（男女問わず、推しへの愛がある方）</td>
-                </tr>
-                <tr>
-                    <th>AO入試（自己推薦）</th>
-                    <td>
-                        【エントリー期間】 2026年6月1日 〜 8月31日<br>
-                        【試験内容】 過去のナイスコメントのスクリーンショット提出、面接（推し語り）
-                    </td>
-                </tr>
-                <tr>
-                    <th>一般入試（前期）</th>
-                    <td>
-                        【出願期間】 2026年10月1日 〜 12月15日<br>
-                        【試験内容】 実技試験（生配信中のリアルタイムコメント入力）、筆記試験（ネットスラングの歴史）
-                    </td>
-                </tr>
-                <tr>
-                    <th>一般入試（後期）</th>
-                    <td>
-                        【出願期間】 2027年1月10日 〜 2月28日<br>
-                        【試験内容】 実技試験、小論文「炎上を未然に防ぐリスナーの役割」
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <section id="partners" class="container">
+        <h2>提携機関・産学連携</h2>
+        <p style="text-align: center; margin-bottom: 30px;">本校は、最前線の配信業界と密接に連携し、実践的なカリキュラムを提供しています。</p>
+        <div class="grid-2">
+            <div class="card">
+                <h3 style="margin-top: 0; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">バーチャルタレント事務所「Helichrysum」</h3>
+                <p>業界を牽引するVTuber事務所と提携。研究生のデビュー配信における「初期コメント支援」や、中堅タレントの「雑談枠盛り上げ実習」など、実際の配信枠を舞台にしたOJT（On the Job Training）を実施しています。</p>
+            </div>
+            <div class="card">
+                <h3 style="margin-top: 0; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">日本ネット言語学・ミーム研究所</h3>
+                <p>日々移り変わるネットスラングやミームの発生源を特定・分析する研究機関と共同で、次世代のバズワードをいち早く捉える「トレンド予測学」の特別講義を展開しています。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" style="background-color: #eeeeee;">
+        <div class="container">
+            <h2>よくある質問（FAQ）</h2>
+            <div class="message-box" style="flex-direction: column; gap: 20px; align-items: stretch;">
+                <div class="faq-item">
+                    <h4>Q. タイピングが遅くても入学できますか？</h4>
+                    <p>A. はい、問題ありません。1年次後期の「基礎タイピング合宿」にて、息をするように文字が打てるレベルまで徹底的に鍛え上げます。ブラインドタッチは必修です。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 推しが炎上してしまった場合、どうすればいいですか？</h4>
+                    <p>A. 必修科目「ネットリテラシーと高度鎮火学」では炎上のリスクと鎮火について学びます。むやみに擁護して火に油を注がず、冷静に事態を見守りつつ、ほとぼりが冷めた頃に「待ってたよ」と完璧なタイミングでコメントする技術を指導します。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 学費はスーパーチャット（投げ銭）で支払えますか？</h4>
+                    <p>A. 申し訳ございません。学費のお支払いは、所定の銀行口座への日本円での振込のみとさせていただいております。推しへのスパチャは計画的にお願いいたします。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 「草」以外の笑いの表現がわかりません。</h4>
+                    <p>A. 教養科目「スラングとしての感情表現と発言者の表情」にて、「ｗ」「ワロタ」「大草原」「森」といった基本から、文脈に合わせた高度な笑いの表現手法まで、バリエーションを伝授します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="access" class="container">
+        <h2>キャンパス・お問い合わせ</h2>
+        <div class="grid-2">
+            <div>
+                <h3 style="margin-top: 0;">アクセス</h3>
+                <p><strong>コメント専門学校 東京本校</strong></p>
+                <p>〒10X-0404<br><strong>東京都 枠守区 沼落町（ぬまおちちょう） 8-8-8</strong><br>サイバービルディング 5階</p>
+                <ul style="font-size: 0.9rem; color: #555;">
+                    <li>※JR「電脳御茶ノ水駅」から徒歩3分</li>
+                    <li>※東京メトロ「新バズり台駅」から徒歩5分</li>
+                </ul>
+                <div style="background-color: #eee; height: 200px; display: flex; align-items: center; justify-content: center; color: #999; border-radius: 8px; margin-top: 15px; border: 2px dashed #ccc;">
+                    　現在、地図の表示にエラーが出ております。申し訳ございません。<br>　事務部長 日昇
+                </div>
+            </div>
+            <div>
+                <h3 style="margin-top: 0;">お問い合わせ（教務部）</h3>
+                <p>ご不明な点はお気軽にお問い合わせください。ただし、荒らし行為やスパムメールは自動的にモデレーターbotにより非表示・ブロックされます。</p>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem;">
+                    <tr>
+                        <th style="text-align: left; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9; width: 35%;">TEL</th>
+                        <td style="padding: 10px; border: 1px solid #ddd;">03-0725-XXXX<br><span style="font-size: 0.8rem; color: #666;">（受付時間：平日 18:00〜26:00 ※配信のゴールデンタイム対応）</span></td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9;">Email</th>
+                        <td style="padding: 10px; border: 1px solid #ddd;">info@comment-school.ac.jp.fake</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9;">公式X(Twitter)</th>
+                        <td style="padding: 10px; border: 1px solid #ddd;">@comment_senmon_fake</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="admission" style="background-color: #eeeeee;">
+        <div class="container">
+            <h2>2027年度 出願日程・募集要項</h2>
+            <table class="admission-table">
+                <tbody>
+                    <tr>
+                        <th>募集定員</th>
+                        <td>各課程 30名（男女問わず、推しへの愛がある方）</td>
+                    </tr>
+                    <tr>
+                        <th>AO入試（自己推薦）</th>
+                        <td>
+                            【エントリー期間】 2026年6月1日 〜 8月31日<br>
+                            【試験内容】 過去のナイスコメントのスクリーンショット提出、面接（推し語り）
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>一般入試（前期）</th>
+                        <td>
+                            【出願期間】 2026年10月1日 〜 12月15日<br>
+                            【試験内容】 実技試験（生配信中のリアルタイムコメント入力）、筆記試験（ネットスラングの歴史）
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>一般入試（後期）</th>
+                        <td>
+                            【出願期間】 2027年1月10日 〜 2月28日<br>
+                            【試験内容】 実技試験、小論文「炎上を未然に防ぐリスナーの役割」
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <footer>
