@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コメント専門学校 | 君にしかできない、コメントがある</title>
+    <style>
+        :root {
+            --primary-color: #ff0000;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #cc0000;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .course-card {
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+        .teacher-card {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            border-left: 4px solid var(--primary-color);
+        }
+        .teacher-icon {
+            font-size: 3rem;
+        }
+        .alumni-card {
+            position: relative;
+            padding-top: 30px;
+        }
+        .alumni-card::before {
+            content: '❝';
+            font-size: 4rem;
+            color: #eee;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            line-height: 1;
+        }
+        .message-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .notice-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .notice-list li {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            border-left: 4px solid #ffcc00;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .notice-list li.important {
+            border-left-color: var(--primary-color);
+        }
+        .date-badge {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+        }
+        .admission-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .admission-table th, .admission-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .admission-table th {
+            background-color: #f1f1f1;
+            width: 30%;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">💬 コメント専門学校</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">校長挨拶</a></li>
+                    <li><a href="#courses">課程紹介</a></li>
+                    <li><a href="#teachers">講師・OB</a></li>
+                    <li><a href="#notices">在校生・保護者様へ</a></li>
+                    <li><a href="#admission">募集要項</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>君にしかできない、<br>コメントがある。</h1>
+            <p>YouTubeの海で、配信者を最高の笑顔にする。<br>あなたのタイピングが、枠の熱狂を創り出す。</p>
+            <a href="#admission" class="btn">出願要項を見る</a>
+        </div>
+    </div>
+
+    <section id="about" class="container">
+        <h2>校長の言葉</h2>
+        <div class="message-box">
+            <p>「配信は、配信者一人で作るものではありません。」</p>
+            <p>リスナーのコメントがあってこそ、一つのエンターテインメントが完成します。当校では、ただ文字を打つだけでなく、場を沸かせ、配信者のモチベーションを引き上げ、時には愛のあるイジりで枠全体を盛り上げる「真のコメント力」を育成します。</p>
+            <p>ROMる（見るだけ）時代は終わりました。さあ、あなたの指先で、推しの配信を伝説に変えましょう。</p>
+            <p style="text-align: right; font-weight: bold; margin-top: 20px;">
+                コメント専門学校 校長<br>草生 太郎（くさむえ たろう）
+            </p>
+        </div>
+    </section>
+
+    <section id="courses" style="background-color: #eeeeee;">
+        <div class="container">
+            <h2>課程紹介</h2>
+            <p style="text-align: center; margin-bottom: 30px;">あなたの個性に合わせた4つの専門課程をご用意しています。</p>
+            <div class="grid-4">
+                <div class="card course-card">
+                    <h3>🎭 ネタコメ養成課程</h3>
+                    <p>大喜利力、語彙力、タイピング速度を極限まで鍛え上げます。一瞬の隙を突いて爆笑をさらう、職人技のコメントを学びます。</p>
+                </div>
+                <div class="card course-card">
+                    <h3>🤼 プロレス専門課程</h3>
+                    <p>配信者との高度な掛け合い（プロレス）を習得します。どこまで踏み込んで良いかのライン見極めや、完璧なフォロー術も実践的に学びます。</p>
+                </div>
+                <div class="card course-card">
+                    <h3>🍵 相づち強化課程</h3>
+                    <p>過疎枠や雑談枠で重宝される、心地よい相づちと共感のコメント術。「わかる」「それな」のバリエーションを100種類マスターします。</p>
+                </div>
+                <div class="card course-card">
+                    <h3>🎯 イジられキャラ課程</h3>
+                    <p>あえて隙を見せるコメントで、配信者から「おい！」と突っ込まれる高度な技術。枠のオアシス的存在になるためのマインドを構築します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers" class="container">
+        <h2>講師陣＆OB・OG紹介</h2>
+        
+        <h3 style="margin-top: 0;">熱血指導！専任講師陣</h3>
+        <div class="grid-2" style="margin-bottom: 40px;">
+            <div class="card teacher-card">
+                <div class="teacher-icon">😎</div>
+                <div>
+                    <h4 style="margin: 0 0 5px;">大木 里斗（おおぎ りと）</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #666;">担当：ネタコメ養成課程</p>
+                    <p style="margin: 5px 0 0; font-size: 0.95rem;">「どんな配信にも草を生い茂らせる、秘技を伝授します。」</p>
+                </div>
+            </div>
+            <div class="card teacher-card">
+                <div class="teacher-icon">🔥</div>
+                <div>
+                    <h4 style="margin: 0 0 5px;">青里 康太（あおり こうた）</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #666;">担当：プロレス専門課程</p>
+                    <p style="margin: 5px 0 0; font-size: 0.95rem;">「プロレスは愛。火傷しないギリギリのラインを教えます。」</p>
+                </div>
+            </div>
+            <div class="card teacher-card">
+                <div class="teacher-icon">🙏</div>
+                <div>
+                    <h4 style="margin: 0 0 5px;">頷木 洞伊（うなずき どうい）</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #666;">担当：相づち強化課程</p>
+                    <p style="margin: 5px 0 0; font-size: 0.95rem;">「神タイミングの『それな』で、推しの承認欲求を満たしましょう。」</p>
+                </div>
+            </div>
+            <div class="card teacher-card">
+                <div class="teacher-icon">🥊</div>
+                <div>
+                    <h4 style="margin: 0 0 5px;">的場 参戸（まとば さんど）</h4>
+                    <p style="margin: 0; font-size: 0.9rem; color: #666;">担当：イジられキャラ課程</p>
+                    <p style="margin: 5px 0 0; font-size: 0.95rem;">「叩かれてからが本番。最高のやられ役の美学を伝授します。」</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>伝説のリスナーたち（卒業生の声）</h3>
+        <div class="grid-2">
+            <div class="card alumni-card">
+                <p><strong>「私の『初見です』から全てが始まりました」</strong></p>
+                <p style="font-size: 0.9rem;">入学前はROM専でしたが、ここでタイミングと語彙力を学んだ結果、今では推しの配信で「いつもの人」として認知されています。人生を変えてくれたこの学校に、深い感謝を。</p>
+                <p style="text-align: right; font-size: 0.8rem; color: #666;">（ネタコメ養成課程 1期生 / P.N. ソルト）</p>
+            </div>
+            <div class="card alumni-card">
+                <p><strong>「人気VTuberのモデレーターを任されています」</strong></p>
+                <p style="font-size: 0.9rem;">相づち課程で学んだ「枠の空気を読む力」がモデレーター業務に直結しています。荒らしを粛清しつつ、配信者を優しくアシストする。この学校で学んだチャット欄の治安維持術は本物です。</p>
+                <p style="text-align: right; font-size: 0.8rem; color: #666;">（相づち強化課程 1期生 / P.N. 赤い帽子の人）</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="notices" style="background-color: #eeeeee;">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2>在学生・保護者様へ</h2>
+                    <ul class="notice-list">
+                        <li class="important">
+                            <span class="date-badge">重要</span>
+                            <strong>実技演習時の騒音について</strong><br>
+                            深夜配信での実技演習（タイピング）におきまして、キーボードの打鍵音による近隣苦情が寄せられています。夜間の受講は静音赤軸キーボード等の使用を強く推奨します。
+                        </li>
+                        <li>
+                            <span class="date-badge">保護者様へ</span>
+                            <strong>スーパーチャット（投げ銭）に関するお願い</strong><br>
+                            本校の成績評価に「赤スパ」等の課金額は一切影響いたしません。純粋なコメント力のみで評価されます。計画的なお小遣いの利用をご家庭でもご指導ください。
+                        </li>
+                        <li>
+                            <span class="date-badge">お知らせ</span>
+                            <strong>第2回「初見詐欺」対策講習会の開催</strong><br>
+                            常連リスナーが新規を装う「初見詐欺」のメリット・デメリットを徹底討論します。参加希望者は教務課Discordまで。
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>同窓会のお知らせ</h2>
+                    <div class="card message-box" style="padding: 25px;">
+                        <h3 style="margin-top: 0; color: var(--primary-color);">第1回 コメ専同窓会</h3>
+                        <p>卒業生、在校生、講師陣が集う年に一度のオンライン大同窓会を開催します！推しの布教、最近の配信トレンド、神コメントの共有など、朝まで語り明かしましょう。</p>
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem;">
+                            <tr>
+                                <th style="text-align: left; padding: 5px 0; border-bottom: 1px solid #ddd; width: 30%;">日時</th>
+                                <td style="padding: 5px 0; border-bottom: 1px solid #ddd;">2026年8月15日（土）21:00〜枠を閉じるまで</td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: left; padding: 5px 0; border-bottom: 1px solid #ddd;">会場</th>
+                                <td style="padding: 5px 0; border-bottom: 1px solid #ddd;">本校公式Discordサーバー<br>「コメ専OB・OGの集い」</td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: left; padding: 5px 0; border-bottom: 1px solid #ddd;">ドレスコード</th>
+                                <td style="padding: 5px 0; border-bottom: 1px solid #ddd;">推しの公式グッズ着用推奨（アバター可）</td>
+                            </tr>
+                        </table>
+                        <a href="#" class="btn" style="margin-top: 20px; width: 100%; box-sizing: border-box; text-align: center;">Discordサーバーに参加する</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="admission" class="container">
+        <h2>2027年度 出願日程・募集要項</h2>
+        <table class="admission-table">
+            <tbody>
+                <tr>
+                    <th>募集定員</th>
+                    <td>各課程 30名（男女問わず、推しへの愛がある方）</td>
+                </tr>
+                <tr>
+                    <th>AO入試（自己推薦）</th>
+                    <td>
+                        【エントリー期間】 2026年6月1日 〜 8月31日<br>
+                        【試験内容】 過去のナイスコメントのスクリーンショット提出、面接（推し語り）
+                    </td>
+                </tr>
+                <tr>
+                    <th>一般入試（前期）</th>
+                    <td>
+                        【出願期間】 2026年10月1日 〜 12月15日<br>
+                        【試験内容】 実技試験（生配信中のリアルタイムコメント入力）、筆記試験（ネットスラングの歴史）
+                    </td>
+                </tr>
+                <tr>
+                    <th>一般入試（後期）</th>
+                    <td>
+                        【出願期間】 2027年1月10日 〜 2月28日<br>
+                        【試験内容】 実技試験、小論文「炎上を未然に防ぐリスナーの役割」
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 コメント専門学校 All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; color: #999;">※これは架空の学校のWebサイトです。実際の出願や赤スパはできません。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
