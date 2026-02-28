@@ -60,11 +60,17 @@
         nav a:hover {
             color: var(--primary-color);
         }
+        /* ヒーローセクション（背景と校章）の変更点 */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+            background: linear-gradient(135deg, #1c2b4d 0%, #0b1120 100%); /* 伝統的なスクールネイビー */
             color: #fff;
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px 100px;
+            position: relative;
+        }
+        .emblem {
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4));
         }
         .hero h1 {
             font-size: 3rem;
@@ -240,15 +246,23 @@
                 </ul>
             </nav>
         </div>
-    </header>
+	</header>
 
     <div class="hero">
         <div class="container">
+            <svg class="emblem" width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10,10 L90,10 L90,45 C90,75 50,95 50,95 C50,95 10,75 10,45 Z" fill="#ff0000" stroke="#ffffff" stroke-width="3"/>
+                <path d="M18,18 L82,18 L82,45 C82,69 50,85 50,85 C50,85 18,69 18,45 Z" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <path d="M30,40 C30,28 70,28 70,40 C70,48 62,52 55,54 L45,64 L45,54 C38,52 30,48 30,40 Z" fill="#ffffff"/>
+                <text x="50" y="46" font-size="16" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="bold" fill="#ff0000" text-anchor="middle">C</text>
+            </svg>
+            
             <h1>君にしかできない、<br>コメントがある。</h1>
             <p>YouTubeの海で、配信者を最高の笑顔にする。<br>あなたのタイピングが、枠の熱狂を創り出す。</p>
             <a href="#admission" class="btn">出願要項を見る</a>
         </div>
     </div>
+
 
     <section id="about" class="container">
         <h2>校長の言葉</h2>
