@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同好会・サークル | コメント専門学校</title>
+    <style>
+        /* 共通デザイン設定 */
+        :root {
+            --primary-color: #ff0000;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* ページ固有のスタイル */
+        .page-header {
+            background: linear-gradient(135deg, #1c2b4d 0%, #0b1120 100%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .page-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+        .club-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .club-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid #ffcc00; /* 同好会テーマカラー（黄色） */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .club-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        .club-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .club-card h3 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 1.15rem;
+            border-bottom: 2px dashed #eee;
+            padding-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">💬 コメント専門学校</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">トップページへ戻る</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>同好会・サークル</h1>
+            <p>授業の枠を超えて、コメントの深淵を探求する有志たちの集い。</p>
+        </div>
+    </div>
+
+    <section class="container" style="background-color: #eeeeee; padding: 60px 20px; border-radius: 8px; margin-top: 40px; margin-bottom: 40px;">
+        <h2>公認同好会一覧</h2>
+        <div class="club-grid">
+            
+            <div class="club-card">
+                <div class="club-icon">🌎</div>
+                <h3>海外チャット・<br>グローバルスラング研究会</h3>
+                <p>Twitchや海外VTuberのチャット欄で飛び交う「Pog」「LOL」「KEKW」などの海外ネットミームやスラングを研究し、国境を越えた神コメを目指す同好会です。海外のコメント研究機関との情報交換も行っています。</p>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">🩹</div>
+                <h3>推し休止・<br>メンタル相互ケア同好会</h3>
+                <p>推しが長期休止や卒業をして「推しロス」に陥った生徒たちが集まり、過去の神配信アーカイブを観賞しながらメンタルを回復させる同好会です。悲しみを分かち合うことで、コメント研鑽の機会を絶やさせません。</p>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">🎬</div>
+                <h3>神コメアーカイブ＆<br>切り抜き同好会</h3>
+                <p>配信内で発生した「コメントと配信者の奇跡の化学反応」をタイムスタンプ付きで記録し、アーカイブ動画へ残して推しを助ける、あるいは公認切り抜き動画の素材にするクリエイター集団です。</p>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">✨</div>
+                <h3>弾幕・絵文字（スタンプ）<br>デザイン同好会</h3>
+                <p>配信の盛り上がりを視覚的に彩るアスキーアート（AA）や、絵文字・スタンプの組み合わせ（弾幕）を開発・共有する同好会です。どこを見てもにぎやかな配信づくりを目指しています。</p>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">🏺</div>
+                <h3>コメント考古学同好会</h3>
+                <p>ニコニコ動画黎明期から現在に至るコメント文化を調査し、「弾幕史料集」を作成しています。年に一度開催される文化祭では、職人による再現弾幕を上映します。</p>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">🎭</div>
+                <h3>初見詐欺同好会</h3>
+                <p>初見を装ったコメントの書き方、および見破り方を研究しています。GAN（敵対的生成ネットワーク）の理論を応用した高度な初見詐欺コメントの生成・識別技術において、世界トップクラスの研究実績を誇ります。部員の約8割が初見を名乗りますが、残り2割は本当に初見です。</p>
+            </div>
+
+            <div class="club-card">
+                <div class="club-icon">🧯</div>
+                <h3>炎上防災同好会</h3>
+                <p>炎上事例を分析し、「燃えないコメント」の書き方を学びます。活動は比較的静かですが、所属学生は企業のSNS運用担当やコミュニティマネージャーなどへの就職実績が良好な傾向にあります。また、「推しからの印象改善セミナー」を定期的に開催しています。</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 コメント専門学校 All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; color: #999;">※これは架空の学校のWebサイトです。団体名や研究内容もフィクションです。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
