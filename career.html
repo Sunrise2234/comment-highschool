@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>就職実績・キャリア | コメント専門学校</title>
+    <style>
+        /* index.htmlと共通のデザイン設定 */
+        :root {
+            --primary-color: #ff0000;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* ページ固有のスタイル */
+        .page-header {
+            background: linear-gradient(135deg, #1c2b4d 0%, #0b1120 100%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .page-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .career-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .career-table th, .career-table td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        .career-table th {
+            background-color: #f1f1f1;
+            width: 70%;
+        }
+        .career-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .support-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .support-item h3 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">💬 コメント専門学校</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">トップページへ戻る</a></li>
+                </ul>
+            </nav>
+        </div>
+	</header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>就職実績・キャリアサポート</h1>
+            <p>趣味を仕事に。あなたのコメント力は、配信業界が求めています。</p>
+        </div>
+    </div>
+
+    <section class="container">
+        <h2>主な就職・進路実績（2025年度）</h2>
+        <div class="card">
+            <p>卒業生は「ただのリスナー」の枠を超え、配信エンターテインメントの裏方から表舞台まで、幅広い分野で活躍しています。</p>
+            <table class="career-table">
+                <thead>
+                    <tr>
+                        <th>職種・進路</th>
+                        <th>人数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>プロモデレーター（治安維持・荒らし対策）</strong><br><span style="font-size: 0.85rem; color: #666;">大手VTuber事務所専属、個人勢専属など</span></td>
+                        <td>45名</td>
+                    </tr>
+                    <tr>
+                        <td><strong>公認切り抜き師</strong><br><span style="font-size: 0.85rem; color: #666;">神コメントと名場面を抽出する動画編集者</span></td>
+                        <td>28名</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VTuberスタジオ・事務所職員</strong><br><span style="font-size: 0.85rem; color: #666;">タレントマネージャー、配信技術スタッフ、企画構成</span></td>
+                        <td>15名</td>
+                    </tr>
+                    <tr>
+                        <td><strong>配信事務所 起業（独立）</strong><br><span style="font-size: 0.85rem; color: #666;">自らタレントを育成・プロデュース</span></td>
+                        <td>2名</td>
+                    </tr>
+                    <tr>
+                        <td><strong>その他（自身が配信者としてデビュー等）</strong></td>
+                        <td>10名</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="container" style="background-color: #eeeeee; padding: 60px 20px; border-radius: 8px;">
+        <h2>就職支援の取り組み</h2>
+        <div class="support-grid">
+            <div class="support-item">
+                <h3>🤝 推し語り適性検査（進路相談）</h3>
+                <p>専門のキャリアカウンセラーが、あなたの「推し活の傾向」から適性を分析。スパチャを投げて応援したいタイプか、裏方で支えたいタイプかを見極め、最適な進路を提案します。</p>
+            </div>
+            <div class="support-item">
+                <h3>💻 実戦モデレーターインターン</h3>
+                <p>提携する配信事務所の協力のもと、実際の配信枠でモデレーター権限を付与される実習を行います。BANの判断速度や、場の空気を和ませる固定コメントの技術を現場で学びます。</p>
+            </div>
+            <div class="support-item">
+                <h3>📁 神コメ・ポートフォリオ制作</h3>
+                <p>在学中に自身が投下し、配信者を笑わせた（または感心させた）コメントのアーカイブを「ポートフォリオ」としてまとめる指導を行います。面接官を唸らせる実績を作り上げます。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 コメント専門学校 All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; color: #999;">※これは架空の学校のWebサイトです。実績も架空のものです。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
