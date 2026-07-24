@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本校の歩み | コメント専門学校</title>
+    <style>
+        :root {
+            --primary-color: #ff0000;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        .page-header {
+            background: linear-gradient(135deg, #1c2b4d 0%, #0b1120 100%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .page-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        /* 年表用のスタイル */
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .history-table th, .history-table td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        .history-table th {
+            width: 15%;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+        .history-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">💬 コメント専門学校</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">トップページへ戻る</a></li>
+                </ul>
+            </nav>
+        </div>
+	</header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>本校の歩み</h1>
+            <p>私塾から専門学校へ。次世代の配信文化を守るための戦いの歴史。</p>
+        </div>
+    </div>
+
+    <section class="container">
+        <h2>前身組織</h2>
+        <div class="card">
+            <h3 style="margin-top: 0; border-left: 4px solid var(--primary-color); padding-left: 10px;">草生式コメント私塾</h3>
+            <p><strong>【創設背景】</strong><br>
+            2017年冬、VTuber黎明期。校長の草生太郎氏が、当時まだ珍しかったVTuberの生配信チャット欄を観察中、「配信の面白さのいくぶんかはコメント欄が創り出している。しかしリスナーの暴走や不器用なコメントが配信者を傷つける現場」を目撃。</p>
+            <p>「次世代の配信文化を守るには、体系化されたコメント教育が必要だ」と一念発起し、オンラインチャットルームで受講生わずか5名から指導を開始したのが本校の始まりである。</p>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 0;">
+        <h2>年表・公式記録（事件）</h2>
+        <div class="card">
+            <table class="history-table">
+                <tbody>
+                    <tr>
+                        <th>2017年 12月</th>
+                        <td>校長・草生太郎が本学の前身となる「草生式コメント私塾」を設立。オンライン上で指導を開始。</td>
+                    </tr>
+                    <tr>
+                        <th>2018年 04月</th>
+                        <td>開校。当時は<strong>「ネタコメ養成課程」</strong>のみの単科塾としてスタート。一期生はわずか8名（全員ROM専脱却を目指す者たち）。</td>
+                    </tr>
+                    <tr>
+                        <th>2018年 11月</th>
+                        <td>「草」の打鍵速度を極める第1回「爆速タイピング選手権」開催。近隣住民から「深夜にキーボードの打鍵音がうるさい」と初のクレームが入る。</td>
+                    </tr>
+                    <tr>
+                        <th>2019年 04月</th>
+                        <td>東京都枠守区沼落町へ移転。専修学校認可を受け、<strong>「コメント専門学校」</strong>として正式開校。</td>
+                    </tr>
+                    <tr>
+                        <th>2019年 10月</th>
+                        <td>雑談配信の需要急増に伴い、第2の課程<strong>「相づち強化課程」</strong>を新設。「わかる」「それな」のバリエーション講義がスタート。</td>
+                    </tr>
+                    <tr>
+                        <th>2020年 05月</th>
+                        <td>配信者との高度な掛け合いを学ぶ<strong>「プロレス専門課程」</strong>を開設。</td>
+                    </tr>
+                    <tr>
+                        <th>2020年 09月</th>
+                        <td><strong style="color: #e60000;">【プロレス炎上事件・第1次】</strong><br>プロレス専門課程の第1期生が実習中、加減を見誤って新人配信者にガチレスを連投。「治安悪化の元凶」としてチャット欄を大炎上させ、講師陣が緊急謝罪行脚し、講義「高度鎮火学」が必修化される。</td>
+                    </tr>
+                    <tr>
+                        <th>2021年 02月</th>
+                        <td><strong>「日本ネット言語学・ミーム研究所」</strong>と産学連携協定を締結。「コメント欄における『草』の生え方と視聴者維持率の相関関係」に関する共同研究データを発表。</td>
+                    </tr>
+                    <tr>
+                        <th>2021年 08月</th>
+                        <td><strong style="color: #0066cc;">【プロレス炎上事件・第2次】</strong><br>プロレス専門課程の講師（現・青里康太先生）が模範解答として打った「お前の配信、実家より安心するわ」が配信者に刺さりすぎ、配信者が感動のあまり号泣・配信中断。優しすぎる炎上として語り継がれる。</td>
+                    </tr>
+                    <tr>
+                        <th>2022年 04月</th>
+                        <td>第4の課程<strong>「イジられキャラ課程」</strong>を開設。あえて突っ込まれる高度なリアクション技術の研究が始まる。</td>
+                    </tr>
+                    <tr>
+                        <th>2022年 10月</th>
+                        <td>バーチャルタレント事務所<strong>「Helichrysum」</strong>と業務提携。研究生配信への「初期コメント支援」およびモデレーター実習を開始。</td>
+                    </tr>
+                    <tr>
+                        <th>2023年 04月</th>
+                        <td><strong style="color: #e60000;">【2023年度入試・定員割れ事件】</strong><br>2023年度入試にて「イジられキャラ課程」の志願者が急減し、まさかの定員割れ（定員30名に対し入学者4名）を起こす。「自ら進んで愛のあるサンドバッグになりたがる若者が減った」として教務課が頭を抱える。</td>
+                    </tr>
+                    <tr>
+                        <th>2023年 07月</th>
+                        <td>イジられキャラ課程の救済企画「誰でも愛されサンドバッグ体験オープンキャンパス」を開催。教員が優しく突っ込んでくれる安心設計が話題に。</td>
+                    </tr>
+                    <tr>
+                        <th>2023年 11月</th>
+                        <td>夜間演習によるキーボード打鍵音問題が限界に達し、全学で赤軸キーボードが支給される。</td>
+                    </tr>
+                    <tr>
+                        <th>2024年 05月</th>
+                        <td>大手VTuberがイジられ系リスナーを絶賛したことをきっかけに、イジられキャラ課程の評価が一転。「空気が読める神人材」として志願者数が前年比500%を記録。</td>
+                    </tr>
+                    <tr>
+                        <th>2025年 03月</th>
+                        <td>2024年度卒業生の就職率98.7%（プロモデレーター、公認切り抜き師など）を達成。</td>
+                    </tr>
+                    <tr>
+                        <th>2026年 01月</th>
+                        <td>学術論文「夏凪とらのゲラとコメントに対する反応のエネルギー比例関係について」を国際ネット学会で発表。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 コメント専門学校 All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; color: #999;">※これは架空の学校のWebサイトです。歴史や事件もフィクションです。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
